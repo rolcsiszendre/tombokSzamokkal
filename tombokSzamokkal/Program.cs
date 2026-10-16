@@ -38,11 +38,45 @@
             }
             Console.WriteLine($"A pozitiv szamok szama: {db}");
         }
+
+        static void EldontesTetele()
+        {
+            int i = 0;
+            while (i < tomb.Length & tomb[i] != 0)
+            {
+                i++;
+            }
+            if (i == tomb.Length)
+            {
+                Console.WriteLine("Van 0 a tombben");
+            }
+            else
+            {
+                Console.WriteLine("Nincs 0 a tombben");
+            }
+        }
+        static void KeresesTetele()
+        {
+            int keresett = 0;
+            int i = 0;
+            while (i < tomb.Length & tomb[i] != keresett)
+            {
+                i++;
+            }
+            if (i == tomb.Length)
+            {
+                Console.WriteLine($"A keresett szam nincs a tombben");
+            }
+            else
+            {
+                Console.WriteLine($"A {keresett} szam a tombben van");
+            }
+        }
             static void Main(string[] args)
         {
             Feltolt();
             MegszamlalasTetele();
-
+            EldontesTetele();
         }
     }
 }
