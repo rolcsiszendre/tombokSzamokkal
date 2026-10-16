@@ -16,9 +16,32 @@
             }
             Console.WriteLine();
         }
-        static void Main(string[] args)
+        static void OsszegzesTetele()
+        {
+            int osszeg = 0;
+            foreach (int item in tomb)
+            {
+                osszeg += item;
+            }
+            Console.WriteLine($"A szamok osszege: {osszeg}");
+        }
+
+        static void MegszamlalasTetele()
+        {
+            int db = 0;
+            foreach (int item in tomb)
+            {
+                if (item > 0)
+                {
+                    db++;
+                }
+            }
+            Console.WriteLine($"A pozitiv szamok szama: {db}");
+        }
+            static void Main(string[] args)
         {
             Feltolt();
+            MegszamlalasTetele();
 
         }
     }
